@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Maaz | Maaz Khan Portfolio</title>
     <!-- Tailwind CSS CDN -->
@@ -58,20 +58,17 @@
               background-color: var(--bg-color);
             }
 
-        input, textarea, select {
-           font-size: 16px;
-         }
-
-        /* Prevent zoom on focus for mobile browsers */
-        input:focus, textarea:focus, select:focus {
-            font-size: 16px !important;
-        }
-
-        input, textarea {
-          font-size: 16px !important;
-          /* This prevents the browser from changing the zoom level on focus */
-          touch-action: manipulation;
-        }
+       /* Force 16px font size on inputs to disable auto-zoom in mobile Safari/Chrome */
+            input, textarea, select {
+                font-size: 16px !important;
+                max-width: 100%;
+            }
+            
+            /* Ensure focus does not trigger zoom */
+            input:focus, textarea:focus, select:focus {
+                font-size: 16px !important;
+                outline: none;
+            }
 
         .neon-border {
             border: 1px solid var(--accent);
