@@ -43,7 +43,20 @@
             /* Hot Pink */
             --secondary: rgb(var(--secondary-rgb));
             --secondary-glow: rgba(var(--secondary-rgb), 0.25);
+            --text-color: #ffffff; /* Default for dark mode */
+            --bg-color: #0f172a;  /* Default for dark mode */
         }
+
+            /* When light theme is active */
+            .light-theme {
+              --text-color: #000000; /* Force black text */
+              --bg-color: #ffffff;
+            }
+            
+            body {
+              color: var(--text-color);
+              background-color: var(--bg-color);
+            }
 
         input, textarea, select {
            font-size: 16px;
