@@ -2,10 +2,10 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- Keep only this single, correct hard-locked viewport tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
     <title>Maaz | Maaz Khan Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -34,6 +34,16 @@
         }
     </script>
     <style>
+        /* Force Global Non-Scalable CSS Added Here */
+        html, body {
+            touch-action: pan-x pan-y;
+            overscroll-behavior: none;
+        }
+        input, textarea {
+            font-size: 16px !important;
+            max-width: 100% !important;
+        }
+
         /* Custom Neon Styling & Theme Bindings */
         :root {
             --accent-rgb: 0, 229, 255;
@@ -45,6 +55,7 @@
             --secondary: rgb(var(--secondary-rgb));
             --secondary-glow: rgba(var(--secondary-rgb), 0.25);
         }
+
             
             body {
               color: var(--text-color);
@@ -123,20 +134,6 @@
             background: var(--accent);
             border-radius: 4px;
         }
-
-        /* Add this to your main CSS file or inside <style> tags */
-        .fade-in-down {
-            animation: fadeInDown 0.8s ease-out forwards;
-        }
-        html {
-    touch-action: manipulation; /* Improves responsiveness while preventing double-tap to zoom */
-}
-
-body {
-    /* Prevents the user from scaling the body container */
-    touch-action: none;
-    overscroll-behavior: none;
-}
     </style>
 </head>
 
