@@ -67,6 +67,12 @@
             font-size: 16px !important;
         }
 
+        input, textarea {
+          font-size: 16px !important;
+          /* This prevents the browser from changing the zoom level on focus */
+          touch-action: manipulation;
+        }
+
         .neon-border {
             border: 1px solid var(--accent);
             box-shadow: 0 0 15px var(--accent-glow);
@@ -987,7 +993,7 @@
                                 <label for="formName"
                                     class="text-xs font-bold uppercase tracking-wider text-slate-400">Your Full Name
                                     *</label>
-                                <input type="text" id="formName" required placeholder="Maaz Khan"
+                                <input class="text-[16px]" type="text" id="formName" required placeholder="Maaz Khan"
                                     class="w-full bg-slate-900/60 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all">
                             </div>
                             <!-- Email Address -->
@@ -995,7 +1001,7 @@
                                 <label for="formEmail"
                                     class="text-xs font-bold uppercase tracking-wider text-slate-400">Your Email Address
                                     *</label>
-                                <input type="email" id="formEmail" required placeholder="client@company.com"
+                                <input class="text-[16px]" type="email" id="formEmail" required placeholder="client@company.com"
                                     class="w-full bg-slate-900/60 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all">
                             </div>
                         </div>
@@ -1004,7 +1010,7 @@
                         <div class="flex flex-col gap-2">
                             <label for="formSubject"
                                 class="text-xs font-bold uppercase tracking-wider text-slate-400">Your Subject *</label>
-                            <input type="text" id="formSubject" required placeholder="Let's build a Web App"
+                            <input class="text-[16px]" type="text" id="formSubject" required placeholder="Let's build a Web App"
                                 class="w-full bg-slate-900/60 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all">
                         </div>
 
@@ -1012,14 +1018,14 @@
                         <div class="flex flex-col gap-2">
                             <label for="formMessage"
                                 class="text-xs font-bold uppercase tracking-wider text-slate-400">Your Message *</label>
-                            <textarea id="formMessage" required rows="5"
+                            <textarea class="text-[16px]" id="formMessage" required rows="5"
                                 placeholder="Hi Maaz, I saw your cyber-neon portfolio and would love to hire you for..."
                                 class="w-full bg-slate-900/60 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all resize-none"></textarea>
                         </div>
 
                         <!-- Terms Accept Checkbox -->
                         <div class="flex items-start gap-3">
-                            <input type="checkbox" id="formTerms" required
+                            <input class="text-[16px]" type="checkbox" id="formTerms" required
                                 class="w-4.5 h-4.5 rounded text-cyan-500 bg-slate-900 border-slate-800 focus:ring-cyan-500 focus:ring-offset-slate-900 mt-0.5 cursor-pointer">
                             <label for="formTerms"
                                 class="text-xs text-slate-400 cursor-pointer select-none leading-relaxed">
